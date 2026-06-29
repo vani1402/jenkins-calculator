@@ -23,7 +23,7 @@ pipeline {
     post {
         success {
             // Saves the jar into Jenkins build history
-            archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+            archiveArtifacts artifacts: 'target/*.jar', fingerprint: true & yes
         }
         failure {
             // Send email if the build fails
